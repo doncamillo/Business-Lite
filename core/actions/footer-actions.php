@@ -63,7 +63,7 @@ function business_footer_widgets() {
 		
 			<?php }
 			
-			echo "<div class='clear'></div> ";
+			echo '<div class="clear"></div>';
 }
 
 /**
@@ -80,10 +80,10 @@ function business_secondary_footer_copyright() {
 	else {
 		$copyright = $options->get($themeslug.'_footer_text');
 	}
-	
-	echo "<div id='afterfootercopyright' class='six columns'>";
-		echo "&copy; $copyright";
-	echo "</div>";
+	$footer = '<div id="afterfootercopyright" class="six columns">';
+	$footer .= "&copy; $copyright";
+	$footer .= '</div>';
+	echo $footer;
 }
 
 /**
