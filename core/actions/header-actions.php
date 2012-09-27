@@ -50,7 +50,7 @@ function business_font() {
 		$font = $options->get($themeslug.'_font'); 
 	} ?>
 	
-	<body style="font-family:'<?php echo str_replace("+", " ", $font ); ?>', <?php echo $family; ?>" <?php body_class(); ?> > <?php
+	<body style="font-family: <?php echo str_replace("+", " ", $font ); ?>, <?php echo $family; ?>" <?php body_class(); ?> > <?php
 }
 
 /**
@@ -240,15 +240,16 @@ function business_logo_menu_content() {
 			</div>	
 			
 			<div class="seven columns">
-			<div id="nav">
-			<?php wp_nav_menu( array(
-			'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
-			'fallback_cb' => 'business_menu_fallback',
-		    'theme_location' => 'header-menu' // Setting up the location for the main-menu, Main Navigation.
-			    )
+				<div id="nav">
+			<?php wp_nav_menu(
+				array(
+				'items_wrap'      	=> '<ul id="nav_menu">%3$s</ul>',
+				'fallback_cb' 		=> 'business_menu_fallback',
+		    		'theme_location' 	=> 'header-menu' // Setting up the location for the main-menu, Main Navigation.
+			   	)
 			);
-	    	?>
-			</div>					
+	    		?>
+				</div>					
 			</div>	
 		
 		</div><!--end row-->
@@ -266,23 +267,23 @@ function business_header_social_icons_content() {
 	global $options, $themeslug; //call globals
 	
 	$facebook		= $options->get($themeslug.'_facebook');
-	$hidefacebook   = $options->get($themeslug.'_hide_facebook_icon');
+	$hidefacebook   	= $options->get($themeslug.'_hide_facebook_icon');
 	$twitter		= $options->get($themeslug.'_twitter');;
-	$hidetwitter    = $options->get($themeslug.'_hide_twitter_icon');;
-	$gplus		    = $options->get($themeslug.'_gplus');
-	$hidegplus      = $options->get($themeslug.'_hide_gplus_icon');
-	$flickr		    = $options->get($themeslug.'_flickr');
-	$hideflickr     = $options->get($themeslug.'_hide_flickr');
+	$hidetwitter    	= $options->get($themeslug.'_hide_twitter_icon');;
+	$gplus		   	= $options->get($themeslug.'_gplus');
+	$hidegplus      	= $options->get($themeslug.'_hide_gplus_icon');
+	$flickr			= $options->get($themeslug.'_flickr');
+	$hideflickr    		= $options->get($themeslug.'_hide_flickr');
 	$pinterest		= $options->get($themeslug.'_pinterest');
-	$hidepinterest	= $options->get($themeslug.'_hide_pinterest');
+	$hidepinterest		= $options->get($themeslug.'_hide_pinterest');
 	$linkedin		= $options->get($themeslug.'_linkedin');
-	$hidelinkedin   = $options->get($themeslug.'_hide_linkedin');
+	$hidelinkedin   	= $options->get($themeslug.'_hide_linkedin');
 	$youtube		= $options->get($themeslug.'_youtube');
-	$hideyoutube    = $options->get($themeslug.'_hide_youtube');
+	$hideyoutube    	= $options->get($themeslug.'_hide_youtube');
 	$googlemaps		= $options->get($themeslug.'_googlemaps');
-	$hidegooglemaps = $options->get($themeslug.'_hide_googlemaps');
+	$hidegooglemaps 	= $options->get($themeslug.'_hide_googlemaps');
 	$email			= $options->get($themeslug.'_email');
-	$hideemail      = $options->get($themeslug.'_hide_email');
+	$hideemail      	= $options->get($themeslug.'_hide_email');
 	$rss			= $options->get($themeslug.'_rsslink');
 	$hiderss   		= $options->get($themeslug.'_hide_rss_icon');
 	$folder = 'default';
