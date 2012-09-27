@@ -87,26 +87,26 @@ function business_meta_tags() { ?>
 
 <meta name="language" content="<?php bloginfo( 'language' ); ?>" /> 
 <!-- Set the viewport width to device width for mobile -->
-<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width"/><?php
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width" /><?php
 
 	if ($options->get($themeslug.'_home_title') != '' AND is_front_page()) { ?>
-<meta name='title' content='<?php echo ($options->get($themeslug.'_home_title')) ;?>'/> <?php
+<meta name="title" content="<?php echo ($options->get($themeslug.'_home_title')) ;?>" /> <?php
 	}
 	if ($options->get($themeslug.'_home_description') != '' AND is_front_page()) { ?>
-<meta name='description' content='<?php echo ($options->get($themeslug.'_home_description')) ;?>' /> <?php
+<meta name="description" content="<?php echo ($options->get($themeslug.'_home_description')) ;?>" /> <?php
 	}
 	if ($options->get($themeslug.'_home_keywords') != '' AND is_front_page()) { ?>
-<meta name='keywords' content=' <?php echo ($options->get($themeslug.'_home_keywords')) ; ?>' /> <?php
+<meta name="keywords" content="<?php echo ($options->get($themeslug.'_home_keywords')) ; ?>" /> <?php
 	}
 	
 	if ($title != '' AND !is_front_page()) {
-		echo "<meta name='title' content='$title' />";
+		echo '<meta name="title" content="'.$title.'" />';
 	}
 	if ($pagedescription != '' AND !is_front_page()) {
-		echo "<meta name='description' content='echo $pagedescription'/>";
+		echo '<meta name="description" content="'.$pagedescription.'" />';
 	}
 	if ($keywords != '' AND !is_front_page()) {
-		echo "<meta name='keywords' content='$keywords'/>";
+		echo '<meta name="keywords" content="'.$keywords.'" />';
 	} 
 }
 
@@ -139,7 +139,7 @@ function business_link_rel() {
 <?php if( $options->get($themeslug.'_apple_touch_toggle') == true && is_array( $options->get($themeslug.'_apple_touch') ) ): ?>
 <!--  For apple touch icon -->
 <?php $apple_icon = $options->get($themeslug.'_apple_touch'); ?>
-<link rel="apple-touch-icon" href="<?php echo $apple_icon['url']; ?>"/>
+<link rel="apple-touch-icon" href="<?php echo $apple_icon['url']; ?>" />
 <?php endif; ?>
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
